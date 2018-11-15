@@ -1,7 +1,7 @@
 var inputBox = document.getElementById('inputBox');
 //var cypherString = 'qwertyuiopasdfghjklzxcvbnm';
 var cypherString = 'abcdefghijklmnopqrstuvwxyz';
-var cypherString = 'uwmseyqpzixrcfthjkdoalvbng';
+var cypherString = 'wumseyqpdhxrtcfijkzoalvbng';
 
 
 inputBox.addEventListener("keydown", function(e){
