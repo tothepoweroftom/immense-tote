@@ -1,0 +1,291 @@
+/*
+ Theme Name:   Divi xLabs
+ Theme URI:    http://xlabsgaze.com/
+ Description:  Divi Child Theme
+ Author:       Steve Roberts
+ Author URI:   http://mbudm.com
+ Template:     Divi
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  Divi-child
+*/
+
+/*
+For older themes, and themes that do not use wp_enqueue_style() to enqueue their stylesheet, use the following line where twentyfourteen is the name of the directory where the theme resides:
+*/
+/*@import url("../Divi/style.css");*/
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+/* header */
+
+#et-info {
+	float: right;
+}
+.et_nav_text_color_light, .et_nav_text_color_light #et-secondary-nav a, .et_nav_text_color_light .et-social-icon a { color: rgba( 0, 0, 0, 0.6 ); }
+
+.et_fixed_nav #logo {
+	max-height: 80px;
+	margin-left:-70px;
+	margin-top:-25px;
+	margin-bottom:10px;
+}
+
+.et-fixed-header #logo {
+	max-height: 48px;
+	margin-left:-40px;
+}
+
+/* logo indent adjust */
+@media only screen and ( min-width: 981px ) and ( max-width: 1220px ) {
+	.et_fixed_nav #logo {
+		margin-left:0;
+	}
+}
+
+/* logo indent adjust */
+@media only screen and ( min-width: 768px ) and ( max-width: 825px ) {
+	.et_fixed_nav #logo {
+		margin-left:0;
+	}
+}
+
+/*-------------------[320px]------------------*/
+@media only screen and ( max-width: 479px ) {
+	.et_fixed_nav #logo {
+		max-height:48px;
+		margin:0;
+	}
+}
+
+#home-main-blurb{
+	background:#999;
+	background-image: linear-gradient(left , rgb(120,120,120) 0%, rgb(153,153,153) 15%, rgb(153,153,153) 85%, rgb(120,120,120) 100%);
+	background-image: -o-linear-gradient(left , rgb(120,120,120) 0%, rgb(153,153,153) 15%, rgb(153,153,153) 85%,  rgb(120,120,120) 100%);
+	background-image: -moz-linear-gradient(left , rgb(120,120,120) 0%, rgb(153,153,153) 15%, rgb(153,153,153) 85%,  rgb(120,120,120) 100%);
+	background-image: -webkit-linear-gradient(left , rgb(120,120,120) 0%, rgb(153,153,153) 15%, rgb(153,153,153) 85%,  rgb(120,120,120) 100%);
+	background-image: -ms-linear-gradient(left , rgb(120,120,120) 0%, rgb(153,153,153) 15%, rgb(153,153,153) 85%,  rgb(120,120,120) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(0, rgb(135,135,135)),
+		color-stop(0.15, rgb(153,153,153)),
+		color-stop(0.85, rgb(153,153,153)), 
+		color-stop(1, rgb(135,135,135))
+	);
+	
+	padding:25px 0;
+}
+
+#home-main-blurb blockquote{
+	color:#fff;
+	font-weight:bold;
+	text-shadow: 0 0 3px #555;
+	font-size:1.8em;
+	line-height:1.6em;
+}
+
+#home-main-blurb h2{
+	font-size:1.8em;
+	max-width:768px;
+	line-height:1.6em;
+}
+
+#home-main-blurb h1{
+	font-weight:300;
+	font-size:3.6em;
+	margin:0 0 0.6em -2px;
+letter-spacing: -2px;
+	color:#e2e2e2;
+	text-shadow:1px 1px 0px #888;
+}
+#home-main-blurb h1 em{
+	color:#fff;
+	font-weight:600;
+	text-shadow:1px 1px 0px #555;
+	font-style:normal;
+	white-space:nowrap;
+}
+
+.darker-box{
+	background: #444;
+	padding: 30px;
+	box-sizing: border-box;
+}
+.vertical-pack{
+	margin-bottom:0;
+}
+
+.widget_recent_entries .post-date{
+	color: #000;
+	font-size: 0.8em;
+	display: block;
+	margin-bottom: 1em;
+}
+
+
+/* reg form */
+
+p + .xl_form{
+	margin-top:30px;
+}
+
+.xl_form.success .xl_form_inner,
+.xl_form.fail .xl_form_inner,
+.xl_form_success,
+.xl_form_fail{
+	display:none;
+}
+
+.xl_form.success .xl_form_success,
+.xl_form.fail .xl_form_fail{
+	display:block;
+}
+
+.xl_select{
+	background: #eee;
+	margin-bottom: 1.7em;
+	padding: 1em 0 1em 1.1em;
+}
+
+.xl_select select, .xl_select label{
+	display:inline;
+}
+
+.xl_select select{
+	margin-left:1em;
+	width:200px;
+}
+
+.xl_cb, .et_pb_contact p input.xl_cb{
+	width:auto !important;
+	display:inline;
+}
+
+/* 
+
+footer 
+
+*/
+
+footer#main-footer{
+/*	margin-top:2em;*/
+}
+
+footer#main-footer, #footer-bottom{
+	background:none;
+}
+#main-footer .container{
+	border-top:1px solid #ddd;
+}
+#footer-bottom .container{
+	border-color:#eee;
+}
+
+.bottom-nav a {
+	color: #999;
+}
+#footer-info{
+	font-size:12px; 
+	color:#bbb;
+	padding-top:1em
+}
+
+
+/* 
+
+bbpress tweaks 
+
+*/
+
+
+.bbp-submit-wrapper input[type="submit"], .bbp-submit-wrapper button{
+	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 400 !important;
+	color: #666;
+	background-color: #ddd;
+	margin: 0 0 0 -4px;
+	padding: 11px 10px 10px 10px !important;
+	border: none;
+}
+input[type="password"] {
+	background-color: #fff;
+	border: 1px solid #bbb;
+	padding: 2px;
+	color: #4e4e4e;
+	margin:0;
+}
+.bbp_widget_login input[type="text"], 
+.bbp_widget_login input[type="password"]{
+	width:100%;
+	box-sizing:border-box;
+}
+
+#sidebar .bbp-remember-me label{
+	width:auto;
+}
+
+div.bbp-submit-wrapper {
+	float: none;
+}
+
+.entry-content div.bbp-submit-wrapper {
+	text-align:left;
+}
+.entry-content div.bbp-submit-wrapper button, .entry-content .bbp-remember-me{
+	margin-left:144px;
+}
+
+.entry-content .bbp-reply-form div.bbp-submit-wrapper button,
+.entry-content .bbp-topic-form  div.bbp-submit-wrapper button{
+	margin-left:0;
+}
+
+#subscription-toggle{
+	font-size:12px;
+	float:right;
+}
+
+.entry-content .bbp-login-form{
+	padding-top:1em;
+	margin-bottom:2em;
+	border-top: 1px solid #bbb;
+}
+
+.bbp-login-form .bbp-login-links {
+	border-top: 1px solid #bbb;
+	padding-top:1em;
+	margin-top:1em;
+	clear:both;
+}
+
+#bbp-search-form{
+	position:relative;
+	padding-right:62px;
+	height: 31px;
+	margin-bottom:5px;
+}
+#bbp-search-form input[type="text"]{
+	border-color: #ddd;
+	padding: 6px 3% 7px 3%;
+margin: 0;
+}
+#bbp-search-form  input[type="submit"]{
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	line-height: 14px;
+	width: 63px;
+	height: 31px !important;
+	position: absolute;
+	right: 0;
+	top: 0;
+	line-height: 1;
+}
+
+.bbpress #main-content .container:before {
+	background:none;
+}
