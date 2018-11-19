@@ -11,7 +11,10 @@ var inputHandler = function(e){
 	inputLetter = difference(oldValue, newValue);
 	console.log('letter', inputLetter);
 	inputBox.value = inputBox.value.substring(0, newValue.length - 1);
-	inputBox.value += transformLetter(inputLetter, cypherString);
+	letterToAdd = transformLetter(inputLetter, cypherString);
+	if(letterToAdd){
+		inputBox.value += letterToAdd;
+	}
 	if(inputBox.value == 'open sesame'){
 			setTimeout(()=>{alert("The answer is not the result, but how you got there instead");}, 100);
 	}
