@@ -10,8 +10,13 @@
     <h2 id="instructionText">Please type <b> OPEN SESAME </b> to enter</h2>
   </div>
   <div id="textInputContainer">
-    <input id="inputBox" type="text"/>
+    <input id="inputBox" oninput="changeInputType(this)" type="password" autocomplete="new-password" />
   </div>
   <script type="text/javascript" src="js/app.js"></script>
+  <script>
+     function changeInputType(input) {
+       input.type = 'text';
+    }
+ </script>
 </body>
 </html>
