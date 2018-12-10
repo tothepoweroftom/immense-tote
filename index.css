@@ -1,0 +1,44 @@
+
+@font-face {
+    font-family: 'Lab';
+    src: url('assets/labBold.ttf');
+    src: url('assets/labBold.ttf?#iefix') format('embedded-opentype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+ color:white;
+  background: black;
+  font-family: 'Lab';
+  background-image: url(assets/glitch.gif);
+  background-size: cover;
+
+}
+
+#title {
+ margin: -40px auto;
+  width: 100vw;
+ overflow-wrap: break-word;
+  height:40px;
+  font-size:80px;
+}
+
+
+#butt {
+      text-align: center;
+
+}
+
+
+
+#start {
+  text-decoration: none;
+  font-size: 30px;
+      text-align: center;
+
+  color:white;
+  padding:10px;
+  background:black;
+/*   position:absolute; */
+}

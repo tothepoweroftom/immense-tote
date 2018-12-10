@@ -1,24 +1,48 @@
 /*h2 {
 	font-family: 'Raleway', Arial, sans-serif;
 }*/
+body {
+  background-color: black;
+}
+
+@font-face {
+    font-family: 'Lab';
+    src: url('assets/labBold.ttf');
+    src: url('assets/labBold.ttf?#iefix') format('embedded-opentype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
 #instructionContainer{
 	width: 100%;
 	margin:auto;
 	text-align:center;
-	margin-top: 150px
+	margin-top: 550px;
+	background-color: #000000;
+	color: white;
+}
+#instructionText{
+	color: white;
+	font-family: 'Lab';
+	font-size: 70px;
 }
 #textInputContainer{
 	width:100%;
 	margin:auto;
 	margin-top: 10%;
 	text-align: center;
+	color: white;
+	background-color: #000000;
 }
 #inputBox{
 	height: 100px;
     width: 550px;
-    font-size: 50px;
+    font-size: 80px;
     text-align: center;
     border:none;
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid white;
+    color: white;
+    background-color: #000000;
+    font-family: 'Lab';
 }
 
