@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Lab';
+    src: url('assets/labBold.ttf');
+    src: url('assets/labBold.ttf?#iefix') format('embedded-opentype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #fafafa;
+    color: rgba(0, 0, 0, 0.84);
+    font-size: 20px;
+    line-height: 1.5;
+    padding-top: 1em;
+}
+
+h2 {
+    font-family: Lab;
+    font-weight: 900;
+    font-size: 80px;
+}
+
+p {
+    font-family: monospace;
+    font-size:30px;
+}
+
+.blurred span {
+    -webkit-filter: blur(6px);
+    filter: blur(6px);
+    /* As pointed out by Alexander Erlandsson (@alexerlandsson), for situations that require better cross-browser support, the blur effect is easily reproduced with transpartent text + text-shadow
+    color: transparent;
+    text-shadow: 0 0 12px rgba(0,0,0,0.8); */
+}
+
+.invisible-ink span {
+    background: #fafafa;
+    color: #fafafa;
+    /* Vincent Charpentier (@VincentCharpentier) also pointed out a simple rule for true invisibility
+    color: rgba(0,0,0,0);*/
+}
+
+.redacted span {
+    position: relative;
+    white-space: pre;
+}
+
+
+
+.redact {
+    background: black;
+    border-radius: 0.1em;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.55);
+    content: " ";
+    width: 100%;
+    height: 54px;
+    left: 0;
+    position: absolute;
+    -webkit-transform: skewY(-5deg) rotate(5deg);
+    transform: skewY(-5deg) rotate(5deg);
+}

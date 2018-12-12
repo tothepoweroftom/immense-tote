@@ -1,73 +1,97 @@
-var inputBox = document.getElementById('inputBox');
-//var cypherString = 'qwertyuiopasdfghjklzxcvbnm';
-var inputString = 'abcdefghijklmnopqrstuvwxyz ';
-var cypherString = 'wumseyqpdhxrtcfijkzoalvbng ';
+let solutions = [{
+        id: "i1",
+        value: "2009"
+    },
+    {
+        id: "i2",
+        value: "in the name of humankind"
+    },
+    {
+        id: "i3",
+        value: "rigourous testing"
+    },
+    {
+        id: "i4",
+        value: "keen eye"
+    },
+    {
+        id: "i5",
+        value: "freedom of expression"
+    },
+    {
+        id: "i6",
+        value: "bleeding edge"
+    },
+    {
+        id: "i7",
+        value: "tip of the spear"
+    },
+    {
+        id: "i8",
+        value: "innovative methodology"
+    },
+    {
+        id: "i9",
+        value: "top products"
+    },
+    {
+        id: "i10",
+        value: "unite us"
+    },
+    {
+        id: "i11",
+        value: "Friday rituals"
+    },
+    {
+        id: "i12",
+        value: "beer time "
+    },
+    {
+        id: "i13",
+        value: "tuesday soundgarden"
+    },
+    {
+        id: "i14",
+        value: "unique parties"
+    },
+    {
+        id: "i15",
+        value: "core culture"
+    }
 
-var oldValue, newValue;
+]
 
-var inputHandler = function(e){
-	newValue = inputBox.value;
-	console.log('inputBox Value', inputBox.value);
-	inputLetter = difference(oldValue, newValue);
-	console.log('letter', inputLetter);
-	inputBox.value = inputBox.value.substring(0, newValue.length - 1);
-	letterToAdd = transformLetter(inputLetter, cypherString);
-	if(letterToAdd){
-		inputBox.value += letterToAdd;
-	}
-	if(inputBox.value == 'open sesame'){
-			setTimeout(()=>{alert("The answer is not the result, but how you got there instead");}, 100);
-	}
-};
+window.myData = [];
+console.log(window.sessionStorage.clear());
 
-var keydownHandler = function(e){
-	console.log("keydown");
-	if(e.keyCode >= 65 && e.keyCode <91){
-		//preventDefault(e);
-		//inputBox.value += transformKeyCode(e.keyCode, cypherString);
-	}
-	oldValue = inputBox.value;
-	console.log('oldvalue: ', oldValue);
-};
+function submitData() {
+    let forms = document.getElementsByClassName("borderless_input");
+    let formsArray = [].slice.call(forms);
+    let storage = window.sessionStorage;
+  
 
-var preventDefault = function(e) {
-  e = e || window.event;
-  if (e.preventDefault)
-      e.preventDefault();
-  e.returnValue = false;  
-};
+    let counter = 0;
+    formsArray.forEach(element => {
+        let inputText = element.value.toLowerCase();
+        
+        // get solution based on id
+        let solution = solutions.find(x=>x.id === element.id);
 
-// var transformKeyCode = function(keyCode, cypher){
-// 	var letterIndex = keyCode - 65;
-// 	var calculatedLetter = cypher.charAt(letterIndex);
-// 	return calculatedLetter;
-// };
+        //compare solutions
+        if(solution.value === inputText){
+            console.log("Correct");
+            storage.setItem(element.id, true);
+        } else {
+            console.log("Wrong");
 
-var transformLetter = function(inputVal, cypher){
-	for (i=0; i<inputString.length; i++){
-		if (inputVal == inputString.charAt(i)){
-			return (cypher.charAt(i));
-		}
-	}
-};
+        }
 
-var difference = function (val1, val2){
-	console.log("finding diff", val1, val2);
-	var output = [];
-	for (i =0; i<val2.length; i++){
-		if(val1[i] !== val2[i]){
-			output.push(val2[i]);
-		}
-	}
-	return output.join("");
-};
+        if(counter < 14) {
+            counter+=1;
+        } else if(counter === 14) {
+            window.location.pathname = '/code.html'
+        }
 
-inputBox.addEventListener('keydown', keydownHandler);
-inputBox.addEventListener('input', inputHandler);
+    });
 
-
-
-
-
-
-
+}
